@@ -1,3 +1,55 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* projects*/
+
+.project-header {
+  margin-left: 24px;
+  background: linear-gradient(to bottom, #5681b6 0%,#335791 100%);
+  border: 1px solid #315589;
+  border-radius: 2px 2px 0 0;
+  width: 100%;
+}
+
+.note-img {
+  margin: 13px 10px;
+}
+.project {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #fff;
+  text-shadow:0 1px 0 #fff;
+  width: 585px;
+}
+
+.line {
+  vertical-align: middle;
+  display: inline-block;
+  border-right: 1px solid #5284BF;
+  height: 16px;
+  margin: 0;
+}
+
+.twoline {
+  vertical-align: middle;
+  display: inline-block;
+  border-right: 1px solid #999;
+  height: 12px;
+  margin: 0;
+}
+
+.link-list {
+  padding: 15px 10px;
+}
+
+.edit-project {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+}
+.delete-project {
+  padding: 5px 10px;
+}

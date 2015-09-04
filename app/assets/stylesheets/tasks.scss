@@ -1,3 +1,132 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Task */
+
+input[type="checkbox"] {
+  display:none;
+}
+
+ul.task-list {
+  width: 100%;
+}
+
+.task-list > .task:last-child {
+  border-bottom: none;
+  border-radius: 0 0 15px 15px;
+}
+
+li.task p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.task p {
+  display: inline-block;
+  padding: 20px 3px 10px;
+  border-right: 1px solid #E7EBEA;
+  width: 660px;
+  text-align: left;
+  margin-left: 0px;
+}
+
+
+ul.task-list {
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  list-style-type: none;
+}
+
+li.task {
+  background: #fff;
+  margin-bottom: -10px;
+  border-bottom: 1px solid #E7EBEA;
+  color: #999;
+  font: bold 13px Arial, sans-serif;
+  position: relative;
+  cursor: move;
+}
+
+.edit-task {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 2px;
+}
+.delete-task {
+  padding: 5px 2px;
+}
+
+.plus-button {
+  padding: 5px 15px 15px;
+}
+/* Task Add*/
+
+.add-task {
+  background: #ccc;
+  background: linear-gradient(-90deg, #E1E1E1 0%, #ccc 100%);
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  padding: 15px 0 11px 10px;
+  margin-left: 24px;
+  margin-bottom: 0px;
+  width: 790px;
+}
+
+.add-task input[type="text"] {
+  width: 535px;
+  height: 30px;
+  padding: 0 0 0 13px;
+  font-size: 14px;
+  color: #bbb;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.75);
+  border: 0;
+  outline: none;
+}
+
+.add-task input[type="submit"] {
+  margin: 0px 5px 10px 10px;
+  width: 108px;
+  height: 30px;
+  cursor: pointer;
+  font-size:14px;
+  color: #fff;
+  text-align:center;
+  text-shadow: 0 1px 0 #000;
+  background: #4D8464;
+  background: linear-gradient(#96CDB0 0%,#4D8464 97%);
+  border: 1px solid #447557;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+}
+
+.control-task{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+.task:hover {
+  background: #FCFED5;
+}
+
+input[type="checkbox"] + label::before {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width:14px;
+  height:15px;
+  margin: 0px 13px 10px 13px;
+  background: image_url('checkbox.png') 0 -16px no-repeat;
+  content:"";
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: image_url('checkbox.png') no-repeat;
+}

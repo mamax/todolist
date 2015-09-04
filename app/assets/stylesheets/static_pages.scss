@@ -1,3 +1,28 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* application */
+
+html, body {
+  background: #cc8810;
+  background: linear-gradient(to bottom, #d9d4c2 0%,#d9d4c2 25%,#cc8810 75%,#cc8810) no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 66px;
+}
+
+
+.unit {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+  width: 800px;
+}

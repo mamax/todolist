@@ -17,6 +17,7 @@
               <%= project.content %>
             </div>
             <%= link_to "#{image_tag("edit_img.png", class: "edit-project")}".html_safe, edit_project_path(project) %>
+            <div class="line"></div>
             <%= link_to "#{image_tag("delete_img.png", class: "delete-project")}".html_safe, project, method: :delete %>
           </div>
 
@@ -37,7 +38,7 @@
 
                   <div class="control-task">
                     <%= link_to "#{image_tag("task_edit_img.png", class: "edit-task")}".html_safe, edit_task_path(task) %>
-
+                    <div class="twoline"></div>
                     <%= link_to "#{image_tag("task_delete_img.png", class: "delete-task")}".html_safe, task, method: :delete %>
                   </div>
                 </li>

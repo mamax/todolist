@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :tasks
+  resources :tasks do
+    collection { post :sort }
+    member do
+      post 'done'
+    end
+  end
   resources :projects
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root  'static_pages#home'

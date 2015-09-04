@@ -30,7 +30,7 @@
           <ul id="project<%=project.id%>" class="task-list">
             <% project.tasks.each do |task| %>
                 <li class="task" id="task_<%= task.id %>">
-                  <%= check_box_tag task.id, task.id, class: "task-check" %>
+                  <%= check_box_tag task.id, task.id, task.done, class: "task-check" %>
 
                   <label for=<%=task.id %> ></label>
                   <p><%= task.task_name %></p>

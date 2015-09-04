@@ -7,8 +7,24 @@
       <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
     </div>
 
+    <% @projects.each do |project| %>
+        <div class="center unit">
+
+          <div class="project-header">
+            <%= image_tag("table.png", class: "note-img") %>
+
+            <div class="project">
+              <%= project.content %>
+            </div>
+            <%= link_to "#{image_tag("edit_img.png", class: "edit-project")}".html_safe, edit_project_path(project) %>
+            <%= link_to "#{image_tag("delete_img.png", class: "delete-project")}".html_safe, project, method: :delete %>
+          </div>
+
+        </div>
+    <% end %>
+
     <div class="center">
-      <%= link_to "Add TODO list", '#', class: "btn btn-large btn-primary" %>
+      <%= link_to "Add TODO list", new_project_path, class: "btn btn-large btn-primary" %>
     </div>
 
 <% else %>

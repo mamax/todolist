@@ -1,12 +1,26 @@
 <% provide(:title, 'Home') %>
 
+<% if signed_in? %>
+    <div class="center unit">
+      <%= @user.email %>  <%= link_to " Edit", edit_user_registration_path(@user), title: "edit profile" %>
+
+      <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+    </div>
+
     <div class="center">
-      <%= link_to "Sign in", '#' %>
-      <div class="line"></div>
-      <%= link_to "Sign up", '#' %>
+      <%= link_to "Add TODO list", '#', class: "btn btn-large btn-primary" %>
+    </div>
+
+<% else %>
+    <div class="center">
+      <%= link_to "Sign in", new_user_session_path %>
+
+      <%= link_to "Sign up", new_user_registration_path %>
     </div>
 
     <div class="center hero-unit">
-      <h1>SAMPLE TODO LIST</h1>
+      <h1>SOME TODO LIST</h1>
       <h3>Ruby Garage</h3>
     </div>
+
+<% end %>

@@ -13,6 +13,7 @@ gem 'coffee-rails', '4.1.0'
 gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.3.1'
 gem 'omniauth-facebook'
+gem 'devise'
 
 
 group :development, :test do

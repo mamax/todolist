@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 20150904140710) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "content"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
   end
 
-  add_index "projects", ["user_id", "created_at"], name: "index_projects_on_user_id_and_created_at", using: :btree
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "tasks", force: :cascade do |t|
     t.string   "task_name"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150904140710) do
     t.integer  "position"
     t.boolean  "done"
   end
+
+  add_index "tasks", ["project_id"], name: "index_tasks_on_project_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

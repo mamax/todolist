@@ -6,5 +6,6 @@ class CreateTasks < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :tasks, :project_id
   end
 end

@@ -37,6 +37,8 @@
                   <p><%= task.task_name %></p>
 
                   <div class="control-task">
+                    <span class="glyphicon glyphicon-move sort-icon"></span>
+
                     <%= link_to "#{image_tag("task_edit_img.png", class: "edit-task")}".html_safe, edit_task_path(task) %>
                     <div class="twoline"></div>
                     <%= link_to "#{image_tag("task_delete_img.png", class: "delete-task")}".html_safe, task, method: :delete %>
